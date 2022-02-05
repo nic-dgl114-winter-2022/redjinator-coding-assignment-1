@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LapTracker</string>
+    <string name="enter_lap_name">Enter lap name</string>
 </resources>
