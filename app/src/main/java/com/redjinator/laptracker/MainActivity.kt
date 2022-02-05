@@ -19,9 +19,18 @@ class MainActivity : AppCompatActivity() {
         startButton.setOnClickListener {
             startLap()
         }
+
+        // Get end button and add listener
+        val endButton : Button = findViewById(R.id.end_button)
+        endButton.setOnClickListener {
+            endLap()
+        }
     }
 
     // Start Lap function
     fun startLap() { begin = System.currentTimeMillis() }
+
+    // End Lap function
+    fun endLap() { end = System.currentTimeMillis() }
 
 }
