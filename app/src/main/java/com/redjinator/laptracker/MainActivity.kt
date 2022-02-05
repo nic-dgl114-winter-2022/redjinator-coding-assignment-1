@@ -31,20 +31,20 @@ class MainActivity : AppCompatActivity() {
 
     // Start Lap function
     fun startLap() {
-        begin = System.currentTimeMillis()
+        begin   = System.currentTimeMillis()
     }
 
     // End Lap function
     fun endLap() {
-        end = System.currentTimeMillis()
+        end     = System.currentTimeMillis()
 
-        val lapName: EditText = findViewById(R.id.lap_entry)
-        val lapBoard: TextView = findViewById(R.id.lap_board)
+        val lapName:    EditText = findViewById(R.id.lap_entry)
+        val lapDisplay: TextView = findViewById(R.id.lap_board)
 
         var minutes = ((end-begin)/1000)/60
         var seconds = ((end-begin)/1000)%60
 
-        lapBoard.text = "${lapBoard.text}\n${lapName.text}\t\t\t${minutes}min ${seconds}sec"
+        lapDisplay.text = "${lapDisplay.text}\n${lapName.text}\t\t\t${minutes}min ${seconds}sec"
     }
 
 }
