@@ -3,6 +3,8 @@ package com.redjinator.laptracker
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,9 +30,21 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Start Lap function
-    fun startLap() { begin = System.currentTimeMillis() }
+    fun startLap() {
+        begin = System.currentTimeMillis()
+    }
 
     // End Lap function
-    fun endLap() { end = System.currentTimeMillis() }
+    fun endLap() {
+        end = System.currentTimeMillis()
+
+        val lapName: EditText = findViewById(R.id.lap_entry)
+        val lapBoard: TextView = findViewById(R.id.lap_board)
+
+        var minutes = ((end-begin)/1000)/60
+        var seconds = ((end-begin)/1000)%60
+
+        lapBoard.text = "${lapBoard.text}\n${lapName.text}\t\t\t${minutes}min ${seconds}sec"
+    }
 
 }
