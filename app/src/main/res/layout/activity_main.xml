@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/task_list2"
+        android:id="@+id/lap_board"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:layout_marginStart="8dp"
@@ -18,5 +18,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Lap Display" />
+        tools:text="Lap Board" />
 </androidx.constraintlayout.widget.ConstraintLayout>
