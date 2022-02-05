@@ -41,10 +41,12 @@ class MainActivity : AppCompatActivity() {
         val lapName:    EditText = findViewById(R.id.lap_entry)
         val lapDisplay: TextView = findViewById(R.id.lap_board)
 
-        var minutes = ((end-begin)/1000)/60
-        var seconds = ((end-begin)/1000)%60
+        val minutes = ((end-begin)/1000)/60
+        val seconds = ((end-begin)/1000)%60
 
-        lapDisplay.text = "${lapDisplay.text}\n${lapName.text}\t\t\t${minutes}min ${seconds}sec"
+
+
+        lapDisplay.text = "${lapDisplay.text}\n${lapName.text}\t\t\t${minutes.toString()}min ${seconds.toString()}sec"
     }
 
 }
