@@ -44,8 +44,8 @@ class MainActivity : AppCompatActivity() {
         val minutes = ((end-begin)/1000)/60
         val seconds = ((end-begin)/1000)%60
 
-
-
+        // This is the way I apprached the problem, but it would be better to extract string resources
+        // as necessary. We'll keep this in mind for next time.
         lapDisplay.text = "${lapDisplay.text}\n${lapName.text}\t\t\t${minutes.toString()}min ${seconds.toString()}sec"
     }
 
